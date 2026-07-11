@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jehova Mekaddesh Ministries</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .card {
+            width: 100%;
+            max-width: 400px;
+            padding: 30px 20px;
+            text-align: center;
+        }
+        /* Contenedor del GIF/Video de la Cruz */
+        .cross-container {
+            margin-bottom: 30px;
+        }
+        .cross-gif {
+            width: 120px;
+            height: auto;
+            opacity: 0.8;
+        }
+        .title {
+            font-size: 20px;
+            letter-spacing: 2px;
+            color: #f3e5ab;
+            text-transform: uppercase;
+            margin-bottom: 25px;
+        }
+        /* Frases del ministerio */
+        .phrases {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #e0e0e0;
+            margin-bottom: 40px;
+        }
+        .highlight {
+            color: #ff6b6b;
+            font-weight: bold;
+            display: block;
+            margin-top: 5px;
+            letter-spacing: 1px;
+        }
+        /* Botones de Links sencillos */
+        .links-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .btn {
+            display: block;
+            padding: 15px;
+            color: #ffffff;
+            text-decoration: none;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 8px;
+            font-size: 15px;
+            transition: all 0.3s ease;
+            background: rgba(255, 255, 255, 0.05);
+        }
+        .btn:hover {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: #f3e5ab;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <!-- Cruz sutil animada (GIF discreto) -->
+        <div class="cross-container">
+            <img class="cross-gif" src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3YwZzV5N3g1N3g1N3g1N3g1N3g1N3g1N3g1N3g1N3g1bCZwaW5zPTE/l0HlU7OxG2D5UfWZa/giphy.gif" alt="Cruz">
+        </div>
+
+        <h1 class="title">Jehova Mekaddesh Ministries</h1>
+
+        <!-- Tus frases -->
+        <div class="phrases">
+            <p>Ministraciones • Consejerías • Oraciones</p>
+            <span class="highlight">— LIBERACIÓN —</span>
+        </div>
+
+        <!-- Tus Enlaces Sencillos -->
+        <div class="links-container">
+            <a href="https://www.soulcenters.org/directory/jehova-mekaddesh-ministries/" target="_blank" class="btn">
+                Visitar Sitio Oficial
+            </a>
+            <a href="https://www.facebook.com/marycarl1970" target="_blank" class="btn">
+                Contactar por Facebook
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>
