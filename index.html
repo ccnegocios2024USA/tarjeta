@@ -7,7 +7,6 @@
     <style>
         body {
             font-family: 'Times New Roman', Times, serif;
-            /* Fondo oscuro premium con destello cálido en el centro */
             background: radial-gradient(circle, #1a1008 0%, #070503 100%);
             color: #ffffff;
             display: flex;
@@ -30,7 +29,7 @@
             transform: translateX(-50%);
             width: 180px;
             height: 220px;
-            opacity: 0.12; /* Muy discreta y sutil para no opacar el contenido */
+            opacity: 0.12;
             z-index: 0;
             pointer-events: none;
             display: flex;
@@ -58,11 +57,10 @@
             background: radial-gradient(circle at bottom, #ffea00 20%, #ff6a00 60%, rgba(255,0,0,0) 100%);
             border-radius: 50% 50% 20% 20% / 70% 70% 40% 40%;
             box-shadow: 0 0 20px #ff6a00;
-            animation: flicker s s infinite alternate, sway 3s ease-in-out infinite alternate;
+            animation: flicker 2s infinite alternate, sway 3s ease-in-out infinite alternate;
             transform-origin: bottom center;
         }
 
-        /* Animaciones sutiles de la Llama */
         @keyframes flicker {
             0% { transform: scale(0.96) rotate(-1deg); opacity: 0.85; }
             100% { transform: scale(1.04) rotate(1deg); opacity: 1; }
@@ -86,7 +84,6 @@
             z-index: 1;
         }
 
-        /* NUEVA IMAGEN DE ENCABEZADO (Guerrero y Archer Ilustrados) */
         .banner-img {
             width: 100%;
             border-radius: 10px;
@@ -102,11 +99,8 @@
             height: 220px;
             margin: 15px 0 25px 0;
             border-radius: 10px;
-            background: url('https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=600') center no-repeat; /* Respaldo elegante */
-            /* Aquí usamos la potente ilustración artística de la palabra, la espada y el fuego */
-            background-image: url('https://thumbs.dreamstime.com/b/la-palabra-b%C3%ADblica-de-dios-espada-con-fuego-afecta-el-evangelio-ilustraci%C3%B3n-ai-generativa-salvaci%C3%B3n-273454912.jpg');
+            background: url('https://thumbs.dreamstime.com/b/la-palabra-b%C3%ADblica-de-dios-espada-con-fuego-afecta-el-evangelio-ilustraci%C3%B3n-ai-generativa-salvaci%C3%B3n-273454912.jpg') center no-repeat;
             background-size: cover;
-            background-position: center;
             border: 1px solid rgba(243, 156, 18, 0.2);
             box-shadow: inset 0 0 30px rgba(0,0,0,0.8), 0 10px 25px rgba(0,0,0,0.6);
             position: relative;
@@ -172,11 +166,18 @@
             border-color: #ffffff;
             font-weight: bold;
         }
+
+        /* Estilo especial para el botón de WhatsApp */
+        .btn-whatsapp:hover {
+            background: linear-gradient(135deg, #25D366 0%, #075E54 100%);
+            color: #ffffff;
+            border-color: #ffffff;
+        }
     </style>
 </head>
 <body>
 
-    <!-- VELA DISCRETA DE FONDO DEBIDAMENTE ENMAQUETADA -->
+    <!-- VELA DISCRETA DE FONDO -->
     <div class="candle-bg">
         <div class="candle-flame"></div>
         <div class="candle-wick"></div>
@@ -185,7 +186,7 @@
 
     <div class="container">
         <!-- Banner Autoría (Guerrero y Arquera) -->
-        <img src="https://watermarked-img-1007539128318240212.png" alt="Jehova Mekaddesh Ministries" class="banner-img" onerror="this.src='https://ccnegocios2024usa.github.io/tarjeta/index.html';">
+        <img src="https://watermarked-img-1007539128318240212.png" alt="Jehova Mekaddesh Ministries" class="banner-img">
 
         <h1>Jehova Mekaddesh Ministries</h1>
         <div class="subtitle">Ministraciones • Consejerías • Oraciones</div>
@@ -194,9 +195,11 @@
         <!-- Espada del Espíritu e Ilustración Bíblica Realista -->
         <div class="artwork-box"></div>
 
-        <!-- Botones de Redes Activos -->
+        <!-- Botones de Redes Actualizados -->
         <a href="https://www.soulcenters.org/directory/jehova-mekaddesh-ministries/" class="btn" target="_blank">Visitar Sitio Oficial</a>
-        <a href="https://www.facebook.com/share/18tKVg98Y3/" class="btn" target="_blank">Contactar por Facebook</a>
+        
+        <!-- Botón Directo a WhatsApp con Mensaje Automatizado -->
+        <a href="https://wa.me/15098300959?text=Bendiciones%20Hna.%20Mary,%20deseo%20comunicarme%20con%20el%20ministerio%20Jehova%20Mekaddesh." class="btn btn-whatsapp" target="_blank">WhatsApp Hna. Mary</a>
     </div>
 
 </body>
