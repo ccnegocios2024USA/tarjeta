@@ -12,48 +12,38 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin: 0;
-            padding: 20px 20px 140px 20px; /* Espacio abajo para que no tape la veladora */
-            box-sizing: border-box;
+            justify-content: center;
             min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
         }
 
-        /* CONTENEDOR PRINCIPAL TRANSPARENTE PREMIUM */
+        /* CONTENEDOR SOBRIO Y ELEGANTE */
         .container {
             text-align: center;
-            max-width: 480px;
+            max-width: 460px;
             width: 100%;
-            background: rgba(12, 8, 5, 0.75);
-            padding: 30px 20px;
+            background: rgba(12, 8, 5, 0.85);
+            padding: 35px 25px;
             border-radius: 20px;
-            border: 1px solid rgba(230, 184, 106, 0.15);
+            border: 1px solid rgba(230, 184, 106, 0.2);
             box-shadow: 0 25px 55px rgba(0,0,0,0.9);
             backdrop-filter: blur(12px);
-            z-index: 2;
-            margin-top: 10px;
-        }
-
-        .banner-img {
-            width: 100%;
-            border-radius: 12px;
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.6);
-            margin-bottom: 20px;
-            display: block;
         }
 
         h1 {
-            font-size: 1.75rem;
+            font-size: 1.8rem;
             color: #e6b86a;
             letter-spacing: 1px;
-            margin: 10px 0 5px 0;
+            margin: 0 0 8px 0;
             text-transform: uppercase;
             font-weight: bold;
             text-shadow: 0 2px 15px rgba(230, 184, 106, 0.35);
         }
 
         .subtitle {
-            font-size: 1.05rem;
+            font-size: 1.1rem;
             color: #ccc2b3;
             margin-bottom: 12px;
             font-style: italic;
@@ -61,34 +51,25 @@
         }
 
         .highlight {
-            font-size: 1.3rem;
+            font-size: 1.35rem;
             color: #ff3c3c;
             letter-spacing: 6px;
             font-weight: bold;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
             text-transform: uppercase;
             text-shadow: 0 0 14px rgba(255, 60, 60, 0.45);
         }
 
-        /* CUADRO DE LA ESPADA DE DIOS Y EL FUEGO */
+        /* IMAGEN CENTRAL DE LA ESPADA CON FUEGO Y BIBLIA */
         .artwork-box {
             width: 100%;
-            height: 230px;
-            margin: 20px 0 30px 0;
+            height: 240px;
+            margin: 10px 0 30px 0;
             border-radius: 12px;
             background: url('https://thumbs.dreamstime.com/b/la-palabra-b%C3%ADblica-de-dios-espada-con-fuego-afecta-el-evangelio-ilustraci%C3%B3n-ai-generativa-salvaci%C3%B3n-273454912.jpg') center no-repeat;
             background-size: cover;
-            border: 1px solid rgba(230, 184, 106, 0.25);
+            border: 1px solid rgba(230, 184, 106, 0.3);
             box-shadow: inset 0 0 40px rgba(0,0,0,0.85), 0 12px 28px rgba(0,0,0,0.65);
-            position: relative;
-        }
-
-        .artwork-box::after {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: linear-gradient(to bottom, rgba(0,0,0,0) 50%, rgba(12, 8, 5, 1) 100%);
-            pointer-events: none;
         }
 
         /* BOTONES PREMIUM */
@@ -103,14 +84,14 @@
             border-radius: 35px;
             font-size: 1.05rem;
             letter-spacing: 1px;
-            transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+            transition: all 0.3s ease;
             box-shadow: 0 5px 18px rgba(0, 0, 0, 0.65);
         }
 
         .btn:hover {
             background: linear-gradient(135deg, #e6b86a 0%, #b37d35 100%);
             color: #070402;
-            transform: translateY(-4px);
+            transform: translateY(-3px);
             box-shadow: 0 10px 28px rgba(230, 184, 106, 0.45);
             border-color: #ffffff;
             font-weight: bold;
@@ -121,121 +102,22 @@
             color: #ffffff;
             border-color: #ffffff;
         }
-
-        /* ARTE DE RECEPTÁCULO: MANOS Y VELADORA HECHAS EN CSS */
-        .prayer-altar {
-            position: fixed;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 100%;
-            max-width: 500px;
-            height: 130px;
-            z-index: 5;
-            pointer-events: none;
-            display: flex;
-            justify-content: center;
-            align-items: flex-end;
-            background: linear-gradient(to top, rgba(7,4,2,1) 40%, rgba(7,4,2,0) 100%);
-        }
-
-        .candle-container {
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            bottom: 15px;
-        }
-
-        .veladora {
-            width: 42px;
-            height: 65px;
-            background: linear-gradient(to right, #e5ba83 0%, #fff3db 50%, #e5ba83 100%);
-            border-radius: 6px 6px 3px 3px;
-            box-shadow: 0 0 25px rgba(230, 184, 106, 0.4), inset 0 8px 12px rgba(0,0,0,0.2);
-            position: relative;
-        }
-
-        .wick {
-            width: 2px;
-            height: 8px;
-            background: #443322;
-            margin-bottom: 1px;
-        }
-
-        .flame {
-            width: 18px;
-            height: 35px;
-            background: radial-gradient(circle at bottom, #ffffff 10%, #ffdf6d 40%, #ff5d00 80%, rgba(255,0,0,0) 100%);
-            border-radius: 50% 50% 20% 20% / 60% 60% 40% 40%;
-            box-shadow: 0 0 20px #ffea75, 0 0 40px #ff5d00, 0 0 60px rgba(255,93,0,0.4);
-            animation: ostra 1.2s infinite alternate ease-in-out;
-            transform-origin: bottom center;
-        }
-
-        @keyframes ostra {
-            0% { transform: scale(0.93) skewX(-2deg); opacity: 0.88; }
-            100% { transform: scale(1.07) skewX(2deg); opacity: 1; }
-        }
-
-        /* MANOS SIMBÓLICAS DE PETICIÓN (SILUETAS ELEGANTES DE LUZ) */
-        .hand {
-            position: absolute;
-            width: 70px;
-            height: 80px;
-            border: 2px solid rgba(230, 184, 106, 0.35);
-            filter: blur(1px);
-            bottom: 5px;
-        }
-
-        .hand-left {
-            left: -65px;
-            border-radius: 100px 20px 40px 10px / 80px 40px 40px 10px;
-            border-right: none;
-            border-bottom: none;
-            transform: rotate(25deg);
-            box-shadow: -5px -5px 15px rgba(230, 184, 106, 0.1);
-        }
-
-        .hand-right {
-            right: -65px;
-            border-radius: 20px 100px 10px 40px / 40px 80px 10px 40px;
-            border-left: none;
-            border-bottom: none;
-            transform: rotate(-25deg);
-            box-shadow: 5px -5px 15px rgba(230, 184, 106, 0.1);
-        }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <!-- Banner Premium con el escudo del Ministerio -->
-        <img src="https://watermarked-img-1007539128318240212.png" alt="Jehova Mekaddesh Ministries" class="banner-img">
-
+        <!-- Título único, limpio y centrado -->
         <h1>Jehova Mekaddesh Ministries</h1>
         <div class="subtitle">Ministraciones • Consejerías • Oraciones • Estudios</div>
         <div class="highlight">— Liberaciones —</div>
 
-        <!-- Sección de la Espada de Fuego (visible al hacer scroll) -->
+        <!-- Impactante imagen central de la Espada de Dios -->
         <div class="artwork-box"></div>
 
         <!-- Botones de Enlace -->
         <a href="https://www.soulcenters.org/directory/jehova-mekaddesh-ministries/" class="btn" target="_blank">Visitar Sitio Oficial</a>
         <a href="https://wa.me/15098300959?text=Bendiciones%20Hna.%20Mary,%20deseo%20comunicarme%20con%20el%20ministerio%20Jehova%20Mekaddesh." class="btn btn-whatsapp" target="_blank">WhatsApp Hna. Mary</a>
-    </div>
-
-    <!-- ALTAR DE ORACIÓN FIJO: MANOS Y VELADORA EN SINTONÍA -->
-    <div class="prayer-altar">
-        <div class="candle-container">
-            <div class="flame"></div>
-            <div class="wick"></div>
-            <div class="veladora">
-                <!-- Manos místicas envolviendo la luz -->
-                <div class="hand hand-left"></div>
-                <div class="hand hand-right"></div>
-            </div>
-        </div>
     </div>
 
 </body>
