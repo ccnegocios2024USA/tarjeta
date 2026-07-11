@@ -5,104 +5,143 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jehova Mekaddesh Ministries</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
         body {
-            background-color: #000000;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0b0b0b;
             color: #ffffff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-        }
-        .card {
-            width: 100%;
-            max-width: 400px;
-            padding: 30px 20px;
-            text-align: center;
-        }
-        /* Contenedor del GIF/Video de la Cruz */
-        .cross-container {
-            margin-bottom: 30px;
-        }
-        .cross-gif {
-            width: 120px;
-            height: auto;
-            opacity: 0.8;
-        }
-        .title {
-            font-size: 20px;
-            letter-spacing: 2px;
-            color: #f3e5ab;
-            text-transform: uppercase;
-            margin-bottom: 25px;
-        }
-        /* Frases del ministerio */
-        .phrases {
-            font-size: 16px;
-            line-height: 1.8;
-            color: #e0e0e0;
-            margin-bottom: 40px;
-        }
-        .highlight {
-            color: #ff6b6b;
-            font-weight: bold;
-            display: block;
-            margin-top: 5px;
-            letter-spacing: 1px;
-        }
-        /* Botones de Links sencillos */
-        .links-container {
             display: flex;
             flex-direction: column;
-            gap: 15px;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
         }
+
+        .container {
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+        }
+
+        /* Diseño del Emblema: Espada, Biblia y Fuego */
+        .emblem-box {
+            position: relative;
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 25px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* El Fuego de fondo */
+        .fire {
+            font-size: 75px;
+            position: absolute;
+            bottom: 10px;
+            animation: flicker 1.5s ease-in-out infinite alternate;
+            filter: drop-shadow(0 0 15px rgba(255, 68, 0, 0.6));
+            z-index: 1;
+        }
+
+        /* La Biblia */
+        .bible {
+            font-size: 55px;
+            position: absolute;
+            bottom: 15px;
+            z-index: 2;
+            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.5));
+        }
+
+        /* La Espada */
+        .sword {
+            font-size: 65px;
+            position: absolute;
+            top: -5px;
+            z-index: 3;
+            transform: rotate(45deg);
+            animation: gleam 3s ease-in-out infinite;
+            filter: drop-shadow(0 0 8px rgba(255,255,255,0.4));
+        }
+
+        /* Animaciones para que se vea vivo y bonito */
+        @keyframes flicker {
+            0% { transform: scale(0.95); opacity: 0.8; }
+            100% { transform: scale(1.05); opacity: 1; }
+        }
+
+        @keyframes gleam {
+            0%, 100% { transform: rotate(45deg) scale(1); }
+            50% { transform: rotate(45deg) scale(1.05); }
+        }
+
+        h1 {
+            font-size: 1.6rem;
+            color: #f39c12;
+            letter-spacing: 2px;
+            margin: 0 0 8px 0;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            font-size: 1rem;
+            color: #bdc3c7;
+            margin-bottom: 10px;
+            font-weight: 300;
+        }
+
+        .highlight {
+            font-size: 1.1rem;
+            color: #e74c3c;
+            letter-spacing: 4px;
+            font-weight: bold;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+        }
+
         .btn {
             display: block;
-            padding: 15px;
+            background-color: transparent;
             color: #ffffff;
             text-decoration: none;
-            border: 1px solid rgba(255, 255, 255, 0.3);
+            padding: 15px;
+            margin-bottom: 15px;
+            border: 1px solid #333333;
             border-radius: 8px;
-            font-size: 15px;
+            font-size: 1rem;
             transition: all 0.3s ease;
-            background: rgba(255, 255, 255, 0.05);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
         }
+
         .btn:hover {
-            background: rgba(255, 255, 255, 0.15);
-            border-color: #f3e5ab;
+            background-color: #ffffff;
+            color: #0b0b0b;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(255, 152, 0, 0.2);
+            border-color: #ffffff;
         }
     </style>
 </head>
 <body>
 
-    <div class="card">
-        <!-- Cruz sutil animada (GIF discreto) -->
-        <div class="cross-container">
-            <img class="cross-gif" src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3YwZzV5N3g1N3g1N3g1N3g1N3g1N3g1N3g1N3g1N3g1bCZwaW5zPTE/l0HlU7OxG2D5UfWZa/giphy.gif" alt="Cruz">
+    <div class="container">
+        <!-- Emblema Espiritual -->
+        <div class="emblem-box">
+            <div class="fire">🔥</div>
+            <div class="bible">📖</div>
+            <div class="sword">⚔️</div>
         </div>
 
-        <h1 class="title">Jehova Mekaddesh Ministries</h1>
+        <h1>Jehova Mekaddesh Ministries</h1>
+        <div class="subtitle">Ministraciones • Consejerías • Oraciones</div>
+        <div class="highlight">— LIBERACIÓN —</div>
 
-        <!-- Tus frases -->
-        <div class="phrases">
-            <p>Ministraciones • Consejerías • Oraciones</p>
-            <span class="highlight">— LIBERACIÓN —</span>
-        </div>
-
-        <!-- Tus Enlaces Sencillos -->
-        <div class="links-container">
-            <a href="https://www.soulcenters.org/directory/jehova-mekaddesh-ministries/" target="_blank" class="btn">
-                Visitar Sitio Oficial
-            </a>
-            <a href="https://www.facebook.com/marycarl1970" target="_blank" class="btn">
-                Contactar por Facebook
-            </a>
-        </div>
+        <!-- Botones de Contacto -->
+        <a href="https://ccnegocios2024usa.github.io/tarjeta/" class="btn">Visitar Sitio Oficial</a>
+        <a href="https://ccnegocios2024usa.github.io/tarjeta/" class="btn">Contactar por Facebook</a>
     </div>
 
 </body>
