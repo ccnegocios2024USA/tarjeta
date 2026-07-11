@@ -6,8 +6,8 @@
     <title>Jehova Mekaddesh Ministries</title>
     <style>
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #0b0b0b;
+            font-family: 'Times New Roman', Times, serif;
+            background: radial-gradient(circle, #151515 0%, #050505 100%);
             color: #ffffff;
             display: flex;
             flex-direction: column;
@@ -21,106 +21,175 @@
 
         .container {
             text-align: center;
-            max-width: 400px;
+            max-width: 450px;
             width: 100%;
+            background: rgba(20, 20, 20, 0.6);
+            padding: 30px 20px;
+            border-radius: 16px;
+            border: 1px solid rgba(243, 156, 18, 0.1);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.7);
+            backdrop-filter: blur(10px);
         }
 
-        /* Diseño del Emblema: Espada, Biblia y Fuego */
-        .emblem-box {
+        /* Contenedor del Emblema Realista */
+        .emblem-container {
             position: relative;
-            width: 120px;
-            height: 120px;
-            margin: 0 auto 25px auto;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            width: 200px;
+            height: 200px;
+            margin: 0 auto 20px auto;
         }
 
-        /* El Fuego de fondo */
-        .fire {
-            font-size: 75px;
+        /* Fuego Realista Animado */
+        .fire-bg {
             position: absolute;
-            bottom: 10px;
-            animation: flicker 1.5s ease-in-out infinite alternate;
-            filter: drop-shadow(0 0 15px rgba(255, 68, 0, 0.6));
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://images.unsplash.com/photo-1608976478334-a1fa50259f9c?auto=format&fit=crop&q=80&w=400') center no-repeat;
+            background-size: contain;
+            mix-blend-mode: screen;
+            animation: burn 2s ease-in-out infinite alternate;
+            opacity: 0.85;
             z-index: 1;
         }
 
-        /* La Biblia */
-        .bible {
-            font-size: 55px;
+        /* La Espada del Espíritu en Alta Calidad */
+        .sword-graphic {
             position: absolute;
-            bottom: 15px;
-            z-index: 2;
-            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.5));
-        }
-
-        /* La Espada */
-        .sword {
-            font-size: 65px;
-            position: absolute;
-            top: -5px;
+            top: 10%;
+            left: 45%;
+            width: 24px;
+            height: 130px;
+            background: linear-gradient(90deg, #e0e0e0, #ffffff, #b0b0b0);
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.6), 0 0 40px rgba(243, 156, 18, 0.5);
+            border-radius: 4px;
             z-index: 3;
-            transform: rotate(45deg);
-            animation: gleam 3s ease-in-out infinite;
-            filter: drop-shadow(0 0 8px rgba(255,255,255,0.4));
+            animation: float 4s ease-in-out infinite;
         }
 
-        /* Animaciones para que se vea vivo y bonito */
-        @keyframes flicker {
-            0% { transform: scale(0.95); opacity: 0.8; }
-            100% { transform: scale(1.05); opacity: 1; }
+        /* Guarda de la espada (Cruce) */
+        .sword-graphic::before {
+            content: '';
+            position: absolute;
+            top: 95px;
+            left: -23px;
+            width: 70px;
+            height: 10px;
+            background: linear-gradient(#f39c12, #d35400);
+            border-radius: 2px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.5);
         }
 
-        @keyframes gleam {
-            0%, 100% { transform: rotate(45deg) scale(1); }
-            50% { transform: rotate(45deg) scale(1.05); }
+        /* Empuñadura de la espada */
+        .sword-graphic::after {
+            content: '';
+            position: absolute;
+            top: 105px;
+            left: 6px;
+            width: 12px;
+            height: 25px;
+            background: #2c3e50;
+            border-radius: 0 0 4px 4px;
+        }
+
+        /* Pomo dorado al final del mango */
+        .pomo {
+            position: absolute;
+            top: 130px;
+            left: 4px;
+            width: 16px;
+            height: 16px;
+            background: #f1c40f;
+            border-radius: 50%;
+            z-index: 4;
+        }
+
+        /* Biblia Sagrada Abierta en la Base */
+        .bible-base {
+            position: absolute;
+            bottom: 12%;
+            left: 10%;
+            width: 80%;
+            height: 35px;
+            background: linear-gradient(to right, #4a2711 0%, #30190b 48%, #1a0d06 50%, #30190b 52%, #4a2711 100%);
+            border-radius: 4px 4px 10px 10px;
+            border-bottom: 5px solid #f39c12;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.8);
+            z-index: 2;
+        }
+
+        /* Páginas de la Biblia */
+        .bible-base::before {
+            content: '';
+            position: absolute;
+            top: -6px;
+            left: 4%;
+            width: 92%;
+            height: 6px;
+            background: linear-gradient(to right, #fffdf0 46%, #dcd7bd 50%, #fffdf0 54%);
+            border-radius: 2px 2px 0 0;
+        }
+
+        /* Animaciones */
+        @keyframes burn {
+            0% { transform: scale(0.96) rotate(-1deg); opacity: 0.8; }
+            100% { transform: scale(1.04) rotate(1deg); opacity: 0.95; }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-8px) rotate(1deg); }
         }
 
         h1 {
-            font-size: 1.6rem;
+            font-size: 1.8rem;
             color: #f39c12;
             letter-spacing: 2px;
-            margin: 0 0 8px 0;
+            margin: 15px 0 5px 0;
             text-transform: uppercase;
-            font-weight: 700;
+            font-weight: bold;
+            text-shadow: 0 2px 10px rgba(243, 156, 18, 0.3);
         }
 
         .subtitle {
-            font-size: 1rem;
+            font-size: 1.1rem;
             color: #bdc3c7;
-            margin-bottom: 10px;
-            font-weight: 300;
+            margin-bottom: 15px;
+            font-style: italic;
+            letter-spacing: 1px;
         }
 
         .highlight {
-            font-size: 1.1rem;
-            color: #e74c3c;
-            letter-spacing: 4px;
+            font-size: 1.3rem;
+            color: #ff3333;
+            letter-spacing: 6px;
             font-weight: bold;
-            margin-bottom: 30px;
+            margin-bottom: 35px;
             text-transform: uppercase;
+            text-shadow: 0 0 10px rgba(255, 51, 51, 0.4);
         }
 
         .btn {
             display: block;
-            background-color: transparent;
+            background: linear-gradient(135deg, rgba(40,40,40,0.5) 0%, rgba(20,20,20,0.8) 100%);
             color: #ffffff;
             text-decoration: none;
-            padding: 15px;
-            margin-bottom: 15px;
-            border: 1px solid #333333;
-            border-radius: 8px;
-            font-size: 1rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            padding: 16px;
+            margin-bottom: 18px;
+            border: 1px solid rgba(243, 156, 18, 0.4);
+            border-radius: 30px;
+            font-size: 1.05rem;
+            letter-spacing: 1px;
+            transition: all 0.4s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
         }
 
         .btn:hover {
-            background-color: #ffffff;
-            color: #0b0b0b;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 12px rgba(255, 152, 0, 0.2);
+            background: linear-gradient(135deg, #f39c12 0%, #d35400 100%);
+            color: #ffffff;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(243, 156, 18, 0.4);
             border-color: #ffffff;
         }
     </style>
@@ -128,20 +197,22 @@
 <body>
 
     <div class="container">
-        <!-- Emblema Espiritual -->
-        <div class="emblem-box">
-            <div class="fire">🔥</div>
-            <div class="bible">📖</div>
-            <div class="sword">⚔️</div>
+        <!-- Emblema Espiritual Realista -->
+        <div class="emblem-container">
+            <div class="fire-bg"></div>
+            <div class="sword-graphic">
+                <div class="pomo"></div>
+            </div>
+            <div class="bible-base"></div>
         </div>
 
         <h1>Jehova Mekaddesh Ministries</h1>
         <div class="subtitle">Ministraciones • Consejerías • Oraciones</div>
         <div class="highlight">— LIBERACIÓN —</div>
 
-        <!-- Botones de Contacto -->
-        <a href="https://ccnegocios2024usa.github.io/tarjeta/" class="btn">Visitar Sitio Oficial</a>
-        <a href="https://ccnegocios2024usa.github.io/tarjeta/" class="btn">Contactar por Facebook</a>
+        <!-- Botones de Redes -->
+        <a href="#" class="btn">Visitar Sitio Oficial</a>
+        <a href="#" class="btn">Contactar por Facebook</a>
     </div>
 
 </body>
