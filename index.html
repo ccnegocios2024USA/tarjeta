@@ -7,6 +7,7 @@
     <style>
         body {
             font-family: 'Times New Roman', Times, serif;
+            /* Ajustamos el fondo para que la vela resalte mejor en la parte inferior */
             background: radial-gradient(circle, #1a1008 0%, #070503 100%);
             color: #ffffff;
             display: flex;
@@ -21,16 +22,16 @@
             overflow-x: hidden;
         }
 
-        /* VELA SOBRIA Y ELEGANTE DE FONDO */
+        /* VELA CORREGIDA: Más visible y mejor posicionada */
         .candle-bg {
             position: fixed;
-            bottom: -20px;
+            bottom: 0px;
             left: 50%;
             transform: translateX(-50%);
             width: 180px;
-            height: 220px;
-            opacity: 0.12;
-            z-index: 0;
+            height: 200px;
+            opacity: 0.35; /* Incrementamos la opacidad para que sea totalmente visible */
+            z-index: 0;    /* Se mantiene en el fondo */
             pointer-events: none;
             display: flex;
             flex-direction: column;
@@ -38,36 +39,38 @@
         }
 
         .candle-body {
-            width: 50px;
-            height: 140px;
+            width: 45px;
+            height: 100px;
             background: linear-gradient(to right, #d4a373, #faedcd, #d4a373);
             border-radius: 4px 4px 0 0;
-            box-shadow: inset 0 10px 20px rgba(0,0,0,0.3);
+            box-shadow: inset 0 8px 15px rgba(0,0,0,0.5), 0 0 20px rgba(212, 163, 115, 0.3);
         }
 
         .candle-wick {
             width: 3px;
-            height: 12px;
-            background-color: #333;
+            height: 10px;
+            background-color: #222;
         }
 
         .candle-flame {
-            width: 24px;
-            height: 45px;
-            background: radial-gradient(circle at bottom, #ffea00 20%, #ff6a00 60%, rgba(255,0,0,0) 100%);
+            width: 22px;
+            height: 40px;
+            background: radial-gradient(circle at bottom, #ffffff 10%, #ffea00 30%, #ff6a00 70%, rgba(255,0,0,0) 100%);
             border-radius: 50% 50% 20% 20% / 70% 70% 40% 40%;
-            box-shadow: 0 0 20px #ff6a00;
-            animation: flicker 2s infinite alternate, sway 3s ease-in-out infinite alternate;
+            box-shadow: 0 0 25px #ffea00, 0 0 45px #ff6a00;
+            animation: flicker 1.5s infinite alternate, sway 2.5s ease-in-out infinite alternate;
             transform-origin: bottom center;
+            margin-bottom: 2px;
         }
 
+        /* Animaciones de la llama */
         @keyframes flicker {
-            0% { transform: scale(0.96) rotate(-1deg); opacity: 0.85; }
-            100% { transform: scale(1.04) rotate(1deg); opacity: 1; }
+            0% { transform: scale(0.95) rotate(-1deg); opacity: 0.9; }
+            100% { transform: scale(1.05) rotate(1deg); opacity: 1; }
         }
         @keyframes sway {
-            0% { transform: skewX(-2deg); }
-            100% { transform: skewX(2deg); }
+            0% { transform: skewX(-3deg); }
+            100% { transform: skewX(3deg); }
         }
 
         /* CONTENEDOR PRINCIPAL */
@@ -75,13 +78,14 @@
             text-align: center;
             max-width: 480px;
             width: 100%;
-            background: rgba(15, 11, 8, 0.75);
+            background: rgba(15, 11, 8, 0.82); /* Un toque más de solidez */
             padding: 25px 20px;
             border-radius: 16px;
-            border: 1px solid rgba(212, 163, 115, 0.15);
-            box-shadow: 0 20px 50px rgba(0,0,0,0.85);
-            backdrop-filter: blur(12px);
-            z-index: 1;
+            border: 1px solid rgba(212, 163, 115, 0.2);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.9);
+            backdrop-filter: blur(8px);
+            z-index: 1; /* Asegura que el contenido quede al frente de la vela */
+            margin-bottom: 60px; /* Despeja el espacio inferior para que luzca la vela */
         }
 
         .banner-img {
@@ -93,7 +97,6 @@
             display: block;
         }
 
-        /* ARTE DE LA ESPADA CON FUEGO Y BIBLIA ABIERTA */
         .artwork-box {
             width: 100%;
             height: 220px;
@@ -142,7 +145,6 @@
             text-shadow: 0 0 12px rgba(255, 68, 68, 0.4);
         }
 
-        /* BOTONES PREMIUM */
         .btn {
             display: block;
             background: linear-gradient(135deg, rgba(50,35,25,0.6) 0%, rgba(25,15,10,0.9) 100%);
@@ -167,7 +169,6 @@
             font-weight: bold;
         }
 
-        /* Estilo especial para el botón de WhatsApp */
         .btn-whatsapp:hover {
             background: linear-gradient(135deg, #25D366 0%, #075E54 100%);
             color: #ffffff;
@@ -177,7 +178,7 @@
 </head>
 <body>
 
-    <!-- VELA DISCRETA DE FONDO -->
+    <!-- VELA DISCRETA DE FONDO CON PARÁMETROS OPTIMIZADOS -->
     <div class="candle-bg">
         <div class="candle-flame"></div>
         <div class="candle-wick"></div>
@@ -197,8 +198,6 @@
 
         <!-- Botones de Redes Actualizados -->
         <a href="https://www.soulcenters.org/directory/jehova-mekaddesh-ministries/" class="btn" target="_blank">Visitar Sitio Oficial</a>
-        
-        <!-- Botón Directo a WhatsApp con Mensaje Automatizado -->
         <a href="https://wa.me/15098300959?text=Bendiciones%20Hna.%20Mary,%20deseo%20comunicarme%20con%20el%20ministerio%20Jehova%20Mekaddesh." class="btn btn-whatsapp" target="_blank">WhatsApp Hna. Mary</a>
     </div>
 
